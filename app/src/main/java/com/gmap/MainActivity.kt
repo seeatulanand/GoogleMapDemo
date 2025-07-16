@@ -9,12 +9,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.gmap.ui.theme.GMapTheme
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.compose.GoogleMap
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.rememberCameraPositionState
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,18 +33,20 @@ class MainActivity : ComponentActivity() {
 @SuppressLint("UnrememberedMutableState")
 @Composable
 fun ComposeGMapDemo() {
-    val _bangloreMbrdi = LatLng(12.9857, 77.7272)
+    val bangaloreMBRDI = LatLng(12.9857, 77.7272)
     val cameraPositionState = rememberCameraPositionState {
-        position = CameraPosition.fromLatLngZoom(_bangloreMbrdi, 10f)
+        position = CameraPosition.fromLatLngZoom(bangaloreMBRDI, 10f)
     }
     GoogleMap(
         modifier = Modifier.fillMaxSize(),
         cameraPositionState = cameraPositionState
     ) {
         Marker(
-            state = MarkerState(position = _bangloreMbrdi),
-            title = "Banglore",
-            snippet = "Marker in Banglore"
+            state = MarkerState(position = bangaloreMBRDI),
+            title = "Bangalore",
+            snippet = "Marker in Bangalore",
+            icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)
         )
- }
+    }
 }
+

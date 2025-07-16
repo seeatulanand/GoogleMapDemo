@@ -1,3 +1,5 @@
 <resources>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">Paste-Key-here</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyCO5d_lmELoOKD0X6YDQQL487GaQOV3_H4
+    </string>
 </resources>
