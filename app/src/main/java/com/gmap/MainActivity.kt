@@ -41,8 +41,8 @@ fun ComposeGMapDemo() {
     ) {
         Marker(
             state = MarkerState(position = _bangloreMbrdi),
-            title = "Singapore",
-            snippet = "Marker in Singapore"
+            title = "Banglore",
+            snippet = "Marker in Banglore"
         )
  }
 }
